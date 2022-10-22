@@ -1,0 +1,84 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>js project</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,700" rel="stylesheet" />
+	<!--<link rel="shoutcut icon" href="../fggg/img/favicon.ico" />-->
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="wraper">
+		<header class="header">
+			<div class="header__contener contener">
+				<div class="header__body">
+					<div class="header__counter"></div>
+					<button class="header__inbtn btn">Ввод</button>
+					<button class="header__reset btn">Сброс</button>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="hero__contener contener">
+					<div class="hero__qvesch">Сколько будет <span id="q1">2 + 3</span> ?</div>
+					<input type="text" class="hero__answer" id="a1">
+					<div class="hero__qvesch">Сколько будет <span id="q2">5 + 1</span> ?</div>
+					<input type="text" class="hero__answer" id="a2">
+					<div class="hero__qvesch">Сколько будет <span id="q3">3 - 2</span> ?</div>
+					<input type="text" class="hero__answer" id="a3">
+					<button class="hero__butn btn">Отпровить</button>
+				</div>
+			</section>
+			<section class="countdown">
+				<div class="countdown__contener contener">
+					<div class="countdown__title">до конца осталось</div>
+					<input type="text" class="countdown__input" >
+					<button class="countdown__butn btn">Посчитать</button>
+					<div class="countdown__body">
+						<div class="countdown__day">
+							<p class="countdown__num">0</p>
+							<span class="countdown__name">день</span>
+						</div>
+						<div class="countdown__hers">
+							<p class="countdown__num">0</p>
+							<span class="countdown__name">часов</span>
+						</div>
+						<div class="countdown__minuts">
+							<p class="countdown__num">0</p>
+							<span class="countdown__name">минут</span>
+						</div>
+						<div class="countdown__seconds">
+							<p class="countdown__num">0</p>
+							<span class="countdown__name">секунд</span>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			
+
+
+		</main>
+		<footer class="footer">
+			<div class="footer__contener contener">
+
+			</div>
+		</footer>
+	</div>
+	<script src="../js project/js/script.js"></script>
+
+</body>
+
+
+</html>
