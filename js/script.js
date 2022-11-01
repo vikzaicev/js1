@@ -3133,6 +3133,70 @@ sumIntervals([
    [7, 10],
    [3, 5]
 ])
+
+function XO(str) {
+   let x = 0
+   let o = 0
+   for (let char of str.toLowerCase()) {
+      if (char == "x") {
+         x++
+      }
+      if (char == "o") {
+         o++
+      }
+   }
+}
+XO("xxOo")
+
+function upArray(arr) {
+   let str = arr.join("")
+   let n = +str
+   console.log(n.toFixed(21));
+   console.log(BigInt(+str + 1).toString().split(''));
+}
+//upArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+function isPangram(string) {
+   let res = []
+   let arr = string.toLowerCase().replace(/[^a-z]/gi, '')
+   console.log(arr);
+   for (let i = 0; i < arr.length; i++) {
+      const element = arr[i];
+      if (!res.includes(element)) {
+         res.push(element)
+      }
+   }
+   console.log(res);
+}
+isPangram("ABCD45EFGH,IJK,LMNOPQR56STUVW3XYZ")
+
+function incrementString(strng) {
+   let str = strng.replace(/[0-9]+$/, "")
+   console.log(str);
+   let num = strng.slice(str.length, strng.length)
+   console.log(num);
+   if (num.length == 0) {
+      console.log(str + 1);
+   }
+   let sum = +num + 1
+   console.log(sum);
+   if (sum.toString().length < num.length) {
+      sum = "0".repeat(num.length - sum.toString().length) + `${sum}`
+   }
+   console.log(str + sum);
+}
+incrementString("foo11bar001")
+
+function solve(s){
+   let uppercase = s.replace(/[^A-Z]/g, "")
+   let lowercase = s.replace(/[^a-z]/g, "")
+   let numbers = s.replace(/[^0-9]/g, "")
+   let specChar = s.replace(/[0-9 a-z]/gi, "")
+   console.log(specChar)
+   console.log([uppercase.length, lowercase.length, numbers.length, specChar.length]);
+   
+  }
+  solve("RYT'>s&gO-.CM9AKeH?,5317tWGpS<*x2ukXZD")
 //===============countdown===================//
 
 const btnCountdown = document.querySelector('.countdown__butn');
@@ -3155,7 +3219,7 @@ function initCountdown(parent, to) {
       }
 
       let toCountDate = new Date(to);
-            let currentDate = new Date();
+      let currentDate = new Date();
 
       let totalSeconds = Math.floor((toCountDate - currentDate) / 1000);
       const seconds = totalSeconds % 60;
