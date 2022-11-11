@@ -3187,16 +3187,106 @@ function incrementString(strng) {
 }
 incrementString("foo11bar001")
 
-function solve(s){
+function solve(s) {
    let uppercase = s.replace(/[^A-Z]/g, "")
    let lowercase = s.replace(/[^a-z]/g, "")
    let numbers = s.replace(/[^0-9]/g, "")
    let specChar = s.replace(/[0-9 a-z]/gi, "")
    console.log(specChar)
    console.log([uppercase.length, lowercase.length, numbers.length, specChar.length]);
-   
-  }
-  solve("RYT'>s&gO-.CM9AKeH?,5317tWGpS<*x2ukXZD")
+
+}
+solve("RYT'>s&gO-.CM9AKeH?,5317tWGpS<*x2ukXZD")
+
+function expandedForm(num) {
+   let str = num.toString()
+   let res = []
+   let nul = ""
+   for (let i = str.length - 1; i >= 0; i--) {
+      const element = str[i];
+      console.log(element);
+      if (element != 0) {
+         res.push(element + nul)
+      }
+      nul += 0
+   }
+   console.log(res.reverse().join(" + "));
+}
+expandedForm(4302)
+
+function numBlocks(w, l, h) {
+   let res = 0
+   while (h > 0) {
+      res = res + (w * l)
+      w++
+      l++
+      h--
+   }
+   console.log(res);
+}
+numBlocks(1, 1, 2)
+
+
+function isPerfect(n) {
+   let res = []
+   for (let i = 0; i < n; i++) {
+      if (n % i == 0) {
+         res.push(i)
+      }
+   }
+   console.log(res.reduce((a, b) => a + b) == n);
+}
+isPerfect(28)
+
+function triangular(n) {
+   let res = []
+   for (let i = n; i > 0; i--) {
+      res.push(i)
+   }
+   console.log(res.reduce((a, b) => a + b));
+}
+triangular(4)
+
+
+function sumStrings(a, b) {
+   let x = parseInt(a)
+   let y = parseInt(b)
+   console.log(x + y);
+}
+sumStrings('123', '456')
+
+function isInteresting(number, awesomePhrases) {
+   let numPlusOne = number + 1
+   let numPlusTwo = number + 2
+   if (number < 98) return 0;
+   if (awesomePhrases.includes(number)) {
+      console.log("2");
+      //return 2;
+   }
+   if (awesomePhrases.includes(numPlusOne) || awesomePhrases.includes(numPlusTwo)) {
+      console.log("1");
+      //return 1;
+   }
+   for (let i = 0; i < number.toString().length; i++) {
+      const element = number.toString()[i];
+   }
+   let increment = "1234567890"
+   if(increment.indexOf(number.toString()) != -1) {
+      console.log("2");
+   }
+   if(increment.indexOf(numPlusOne.toString()) != -1 ||increment.indexOf(numPlusTwo.toString()) != -1) {
+      console.log("1");
+      console.log(increment.indexOf(numPlusOne.toString() != -1 )||increment.indexOf(numPlusTwo.toString() != -1))
+   }
+   let decrement = "9876543210"
+   if(decrement.indexOf(number.toString()) >= 0) {
+      console.log("2");
+   }
+   if(decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
+      console.log("1");
+   }
+}
+isInteresting(3209, [1337, 256])
 //===============countdown===================//
 
 const btnCountdown = document.querySelector('.countdown__butn');
