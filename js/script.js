@@ -3265,28 +3265,34 @@ function isInteresting(number, awesomePhrases) {
    }
    if (awesomePhrases.includes(numPlusOne) || awesomePhrases.includes(numPlusTwo)) {
       console.log("1");
-      //return 1;
    }
    for (let i = 0; i < number.toString().length; i++) {
       const element = number.toString()[i];
    }
    let increment = "1234567890"
-   if(increment.indexOf(number.toString()) != -1) {
+   if (increment.indexOf(number.toString()) != -1) {
       console.log("2");
    }
-   if(increment.indexOf(numPlusOne.toString()) != -1 ||increment.indexOf(numPlusTwo.toString()) != -1) {
+   if (increment.indexOf(numPlusOne.toString()) != -1 || increment.indexOf(numPlusTwo.toString()) != -1) {
       console.log("1");
-      console.log(increment.indexOf(numPlusOne.toString() != -1 )||increment.indexOf(numPlusTwo.toString() != -1))
+      console.log(increment.indexOf(numPlusOne.toString() != -1) || increment.indexOf(numPlusTwo.toString() != -1))
    }
    let decrement = "9876543210"
-   if(decrement.indexOf(number.toString()) >= 0) {
+   if (decrement.indexOf(number.toString()) >= 0 && number.toString().length > 2) {
       console.log("2");
    }
-   if(decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
+   if (decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
       console.log("1");
    }
+   if(number.toString().slice(1) == "0".repeat(number.toString().length - 1)) {
+      console.log("2");
+   }
+   if(numPlusOne.toString().slice(1) == "0".repeat(numPlusOne.toString().length - 1) || numPlusTwo.toString().slice(1) == "0".repeat(numPlusTwo.toString().length - 1)) {
+      console.log("1");
+   }
+
 }
-isInteresting(3209, [1337, 256])
+isInteresting(98, [1337, 256])
 //===============countdown===================//
 
 const btnCountdown = document.querySelector('.countdown__butn');
