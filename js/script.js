@@ -3333,6 +3333,12 @@ function isInteresting(number, awesomePhrases) {
    }
 }
 isInteresting(99, [1337, 256])
+
+function alphanumeric(string){
+   let n = string.replace(/[^0-9 ^a-z]/gi, "").replace(/[\s]/g, "")
+   console.log(n == string);
+ }
+ alphanumeric("hello99 world_")
 //===============countdown===================//
 
 const btnCountdown = document.querySelector('.countdown__butn');
