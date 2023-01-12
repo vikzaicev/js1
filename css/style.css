@@ -196,12 +196,14 @@ main {
   margin-bottom: 20px;
 }
 
-.countdown, .countdown2 {
+.countdown,
+.countdown2 {
   padding: 30px 0;
   background-color: #8f98ca;
 }
 
-.countdown__title, .countdown2__title {
+.countdown__title,
+.countdown2__title {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,18 +221,26 @@ main {
   color: #636e43;
 }
 
-.countdown__input, .countdown2__input {
+.countdown__input,
+.countdown2__input {
   margin: 10px 20px;
   padding: 5px 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
 }
 
-.countdown__butn, .countdown2__butn {
+.countdown__input:focus,
+.countdown2__input:focus {
+  outline: 2px solid #4d533c;
+}
+
+.countdown__butn,
+.countdown2__butn {
   margin: 10px;
 }
 
-.countdown__body, .countdown2__body {
+.countdown__body,
+.countdown2__body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -245,7 +255,11 @@ main {
           justify-content: space-between;
 }
 
-.countdown__day, .countdown__hers, .countdown__minuts, .countdown__seconds, .countdown2__day, .countdown2__hers, .countdown2__minuts, .countdown2__seconds {
+.countdown__day, .countdown__hers, .countdown__minuts, .countdown__seconds,
+.countdown2__day,
+.countdown2__hers,
+.countdown2__minuts,
+.countdown2__seconds {
   background-color: #b93c62;
   padding: 20px 20px;
   display: -webkit-box;
@@ -261,16 +275,117 @@ main {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 150px;
+  border: 1px solid #6e7cc7;
+  max-width: 150px;
+  width: 100%;
 }
 
-.countdown__num, .countdown2__num {
+@media (max-width: 530px) {
+  .countdown__day, .countdown__hers, .countdown__minuts, .countdown__seconds,
+  .countdown2__day,
+  .countdown2__hers,
+  .countdown2__minuts,
+  .countdown2__seconds {
+    padding: 15px;
+  }
+}
+
+.countdown__num,
+.countdown2__num {
   color: #f2f2f2;
   font-size: 36px;
   font-weight: 500;
 }
 
-.countdown__name, .countdown2__name {
+@media (max-width: 630px) {
+  .countdown__num,
+  .countdown2__num {
+    font-size: 28px;
+  }
+}
+
+.countdown__name,
+.countdown2__name {
   font-size: 24px;
   color: #f2f2f2;
+}
+
+@media (max-width: 630px) {
+  .countdown__name,
+  .countdown2__name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 630px) {
+  .countdown__name,
+  .countdown2__name {
+    font-size: 20px;
+  }
+}
+
+.color {
+  padding: 15px;
+  background-color: #8f98ca;
+}
+
+.color__contener {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 570px) {
+  .color__contener {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.car {
+  padding: 20px;
+  background-color: #f5dada;
+}
+
+.car__contener {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.car__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.car__image {
+  width: 90%;
+  height: 60%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }

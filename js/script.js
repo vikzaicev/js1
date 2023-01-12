@@ -3271,18 +3271,18 @@ function isInteresting(number, awesomePhrases) {
       const element = number.toString()[i];
    }
    let increment = "1234567890"
-   if(increment.indexOf(number.toString()) != -1) {
+   if (increment.indexOf(number.toString()) != -1) {
       console.log("2");
    }
-   if(increment.indexOf(numPlusOne.toString()) != -1 ||increment.indexOf(numPlusTwo.toString()) != -1) {
+   if (increment.indexOf(numPlusOne.toString()) != -1 || increment.indexOf(numPlusTwo.toString()) != -1) {
       console.log("1");
-      console.log(increment.indexOf(numPlusOne.toString() != -1 )||increment.indexOf(numPlusTwo.toString() != -1))
+      console.log(increment.indexOf(numPlusOne.toString() != -1) || increment.indexOf(numPlusTwo.toString() != -1))
    }
    let decrement = "9876543210"
-   if(decrement.indexOf(number.toString()) >= 0) {
+   if (decrement.indexOf(number.toString()) >= 0) {
       console.log("2");
    }
-   if(decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
+   if (decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
       console.log("1");
    }
 }
@@ -3334,7 +3334,59 @@ function initCountdown(parent, to) {
 
 //initCountdown('.countdown', userDate)
 
+//===============countdown===================//
+//===============color  bg ==================//
+const colorBtn = document.querySelector('.color__butn')
+const colorBtn2 = document.querySelector('.color__butn2')
+const countdownBody = document.querySelector('.countdown')
 
+colorBtn.addEventListener('click', criateNewColor)
+colorBtn2.addEventListener('click', returnOldColor)
+
+function criateNewColor() {
+   let newColor = '#';
+   const colorLitera = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'f','a', 'b', 'c', 'd', 'f'];
+   for (let i = 0; i < 6; i++) {
+      let randomNum = Math.floor(Math.random() * colorLitera.length)
+      newColor += colorLitera[randomNum]
+   }
+   console.log(newColor);
+   countdownBody.style.backgroundColor = `${newColor}`
+}
+
+function returnOldColor() {
+   countdownBody.style.backgroundColor = "rgb(143, 152, 202)"
+}
+
+//===============color  bg =================//
+
+//===============API========================//
+const buttonCar = document.querySelector('.car__butn')
+const img = document.querySelector('.car__img')
+const url = "http://aws.random.cat/meow";
+
+
+buttonCar.addEventListener('click', () => {
+   let loaded = img.complete;
+   if (loaded) {
+      fetchImg()
+   }
+})
+
+async function fetchImg() {
+   try {
+      const response = await fetch(url);
+      const data = await response.json();
+      img.src = data.file;
+      console.log(data.file);
+      console.log(img);
+   }
+   catch (error) {
+      console.log(error);
+   }
+}
+
+//===============API========================//
 
 
 
