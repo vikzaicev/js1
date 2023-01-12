@@ -75,16 +75,13 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 .wraper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   overflow: hidden;
@@ -106,7 +103,6 @@ body.noscrol {
 
 main {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
@@ -123,17 +119,14 @@ main {
   display: inline-block;
   margin: 30px 0;
   background-color: #6e7cc7;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  border-radius: 10px;
 }
 
 .header__counter {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 20px;
@@ -153,12 +146,10 @@ main {
   color: #f2f2f2;
   font-size: 20px;
   background-color: #546131;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  border-radius: 10px;
   -webkit-box-shadow: #4d533c 3px 3px;
           box-shadow: #4d533c 3px 3px;
   -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -168,7 +159,6 @@ main {
 
 .btn:active {
   -webkit-transform: translate(3px, 3px);
-      -ms-transform: translate(3px, 3px);
           transform: translate(3px, 3px);
   -webkit-box-shadow: #4d533c 0px 0px;
           box-shadow: #4d533c 0px 0px;
@@ -186,8 +176,7 @@ main {
 
 .hero__answer {
   margin-bottom: 10px;
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
+  border-radius: 10px;
   padding: 5px 15px;
 }
 
@@ -205,15 +194,12 @@ main {
 .countdown__title,
 .countdown2__title {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 36px;
@@ -225,8 +211,7 @@ main {
 .countdown2__input {
   margin: 10px 20px;
   padding: 5px 10px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  border-radius: 5px;
 }
 
 .countdown__input:focus,
@@ -242,15 +227,12 @@ main {
 .countdown__body,
 .countdown2__body {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -263,16 +245,13 @@ main {
   background-color: #b93c62;
   padding: 20px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   border: 1px solid #6e7cc7;
