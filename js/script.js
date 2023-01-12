@@ -3265,36 +3265,10 @@ function isInteresting(number, awesomePhrases) {
    }
    if (awesomePhrases.includes(numPlusOne) || awesomePhrases.includes(numPlusTwo)) {
       console.log("1");
+      //return 1;
    }
-   let res = []
    for (let i = 0; i < number.toString().length; i++) {
       const element = number.toString()[i];
-      if (!res.includes(element)) {
-         res.push(element)
-      }
-   }
-   if (res.length == 1 && number.toString().length > 2) {
-      console.log("2");
-   }
-   let res1 = []
-   for (let i = 0; i < numPlusOne.toString().length; i++) {
-      const element = numPlusOne.toString()[i];
-      if (!res1.includes(element)) {
-         res1.push(element)
-      }
-   }
-   if (res1.length == 1) {
-      console.log("1");
-   }
-   let res2 = []
-   for (let i = 0; i < numPlusTwo.toString().length; i++) {
-      const element = numPlusTwo.toString()[i];
-      if (!res2.includes(element)) {
-         res2.push(element)
-      }
-   }
-   if (res2.length == 1) {
-      console.log("1");
    }
    let increment = "1234567890"
    if (increment.indexOf(number.toString()) != -1) {
@@ -3309,40 +3283,10 @@ function isInteresting(number, awesomePhrases) {
       console.log("2");
    }
    if (decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
-   if (decrement.indexOf(number.toString()) >= 0 && number.toString().length > 2) {
-      console.log("2");
-   }
-   if (decrement.indexOf(numPlusOne.toString()) >= 0 || decrement.indexOf(numPlusTwo.toString()) != -1) {
-      console.log("1");
-   }
-   if (number.toString().slice(1) == "0".repeat(number.toString().length - 1)) {
-      console.log("2");
-   }
-   if (numPlusOne.toString().slice(1) == "0".repeat(numPlusOne.toString().length - 1) || numPlusTwo.toString().slice(1) == "0".repeat(numPlusTwo.toString().length - 1)) {
-      console.log("1");
-   }
-   console.log(number.toString().slice(0, Math.floor(number.toString().length / 2)))
-   console.log(number.toString().split('').reverse().join("").slice(0, Math.floor(number.toString().length / 2)))
-   if(number.toString().slice(0, Math.floor(number.toString().length / 2)) ==
-   number.toString().split('').reverse().join("").slice(0, Math.floor(number.toString().length / 2))) {
-      console.log("2");
-   }
-   if(numPlusOne.toString().slice(0, Math.floor(numPlusOne.toString().length / 2)) ==
-   numPlusOne.toString().split('').reverse().join("").slice(0, Math.floor(numPlusOne.toString().length / 2))) {
-      console.log("1");
-   }
-   if(numPlusTwo.toString().slice(0, Math.floor(numPlusTwo.toString().length / 2)) ==
-   numPlusTwo.toString().split('').reverse().join("").slice(0, Math.floor(numPlusTwo.toString().length / 2))) {
       console.log("1");
    }
 }
-isInteresting(99, [1337, 256])
-
-function alphanumeric(string){
-   let n = string.replace(/[^0-9 ^a-z]/gi, "").replace(/[\s]/g, "")
-   console.log(n == string);
- }
- alphanumeric("hello99 world_")
+isInteresting(3209, [1337, 256])
 //===============countdown===================//
 
 const btnCountdown = document.querySelector('.countdown__butn');
@@ -3441,4 +3385,6 @@ async function fetchImg() {
       console.log(error);
    }
 }
-//===============API=========================//
+
+//===============API========================//
+
